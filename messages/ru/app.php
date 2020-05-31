@@ -11,6 +11,8 @@ return [
     'NAV_SIGN_UP' => 'Регистрация',
     'NAV_SIGN_IN' => 'Вход',
     'NAV_SIGN_OUT' => 'Выход',
+    'NAV_SOURCE_DATA' => 'Исходные данные',
+    'NAV_USERS' => 'Пользователи',
 
     /* Пункты правого меню */
     'SIDE_NAV_POSSIBLE_ACTIONS' => 'Возможные действия',
@@ -37,6 +39,7 @@ return [
 
     /* Общие сообщения об ошибках */
     'ERROR_MESSAGE_PAGE_NOT_FOUND' => 'Страница не найдена.',
+    'ERROR_MESSAGE_PAGE_NOT_EXIST' => 'The requested page does not exist.',
     'ERROR_MESSAGE_ACCESS_DENIED' => 'Вам не разрешено производить данное действие.',
 
     /* Общие уведомления на форме с captcha */
@@ -63,6 +66,18 @@ return [
     'SIGN_IN_PAGE_TEXT' => 'Пожалуйста, заполните следующие поля для входа:',
     'SIGN_IN_PAGE_RESET_TEXT' => 'Если Вы забыли свой пароль, то Вы можете',
     'SIGN_IN_PAGE_RESET_LINK' => 'сбросить его',
+    /* Страницы раздела "Задачи" */
+    'TASK_PAGE_TASK' => 'Задача',
+    'TASK_PAGE_TASKS' => 'Задачи',
+    'TASK_PAGE_CREATE_TASK' => 'Создать задачу',
+    'TASK_PAGE_VIEW_TASK' => 'Просмотр задачи',
+    'TASK_PAGE_UPDATE_TASK' => 'Изменить задачу',
+    'TASK_PAGE_DELETE_TASK' => 'Удалить задачу',
+    'TASK_PAGE_MODAL_FORM_TEXT' => 'Вы уверены, что хотите удалить данную задачу?',
+    /* Сообщения на страницах раздела "Задачи" */
+    'TASK_PAGE_MESSAGE_CREATE_TASK' => 'Вы успешно создали новую задачу.',
+    'TASK_PAGE_MESSAGE_UPDATED_TASK' => 'Вы успешно обновили данную задачу.',
+    'TASK_PAGE_MESSAGE_DELETED_TASK' => 'Вы успешно удалили задачу.',
 
     /* Формы */
     /* ContactForm */

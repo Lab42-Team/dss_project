@@ -11,6 +11,8 @@ return [
     'NAV_SIGN_UP' => 'Sign up',
     'NAV_SIGN_IN' => 'Sign in',
     'NAV_SIGN_OUT' => 'Sign out',
+    'NAV_SOURCE_DATA' => 'Source data',
+    'NAV_USERS' => 'Users',
 
     /* Пункты правого меню */
     'SIDE_NAV_POSSIBLE_ACTIONS' => 'Possible actions',
@@ -37,6 +39,7 @@ return [
 
     /* Общие сообщения об ошибках */
     'ERROR_MESSAGE_PAGE_NOT_FOUND' => 'Page not found.',
+    'ERROR_MESSAGE_PAGE_NOT_EXIST' => 'The requested page does not exist.',
     'ERROR_MESSAGE_ACCESS_DENIED' => 'You are not allowed to perform this action.',
 
     /* Общие уведомления на форме с captcha */
@@ -63,6 +66,18 @@ return [
     'SIGN_IN_PAGE_TEXT' => 'Please fill out the following fields to sign in:',
     'SIGN_IN_PAGE_RESET_TEXT' => 'If you forgot your password you can',
     'SIGN_IN_PAGE_RESET_LINK' => 'reset it',
+    /* Страницы раздела "Задачи" */
+    'TASK_PAGE_TASK' => 'Task',
+    'TASK_PAGE_TASKS' => 'Tasks',
+    'TASK_PAGE_CREATE_TASK' => 'Create task',
+    'TASK_PAGE_VIEW_TASK' => 'View task',
+    'TASK_PAGE_UPDATE_TASK' => 'Update task',
+    'TASK_PAGE_DELETE_TASK' => 'Delete task',
+    'TASK_PAGE_MODAL_FORM_TEXT' => 'Are you sure that you want to delete this task?',
+    /* Сообщения на страницах раздела "Задачи" */
+    'TASK_PAGE_MESSAGE_CREATE_TASK' => 'You have successfully created a new task.',
+    'TASK_PAGE_MESSAGE_UPDATED_TASK' => 'You have successfully updated task.',
+    'TASK_PAGE_MESSAGE_DELETED_TASK' => 'You have successfully deleted task.',
 
     /* Формы */
     /* ContactForm */

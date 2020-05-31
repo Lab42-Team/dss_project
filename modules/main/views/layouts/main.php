@@ -37,6 +37,26 @@ AppAsset::register($this);
                 'class' => 'navbar-inverse navbar-fixed-top',
             ],
         ]);
+
+        echo Nav::widget([
+            'options' => ['class' => 'navbar-nav navbar-left'],
+            'encodeLabels' => false,
+            'items' => [
+                ['label' => '<span class="glyphicon glyphicon-list-alt"></span> ' .
+                    Yii::t('app', 'NAV_SOURCE_DATA'), 'url' => '#',
+                    'items' => [
+                        ['label' => 'Задачи', 'url' => ['/task/list']],
+                        ['label' => 'Критерии', 'url' => ['/criteria/list']],
+                        ['label' => 'Альтернативы', 'url' => ['/alternative/list']],
+                        ['label' => 'Решения', 'url' => ['/decision/list']],
+                        ['label' => 'Оценки', 'url' => ['/evaluation/list']],
+                    ],
+                ],
+                ['label' => '<span class="glyphicon glyphicon-user"></span> ' .
+                    Yii::t('app', 'NAV_USERS'), 'url' => ['/user/list']],
+            ],
+        ]);
+
         echo "<form class='navbar-form navbar-right'>" . WLang::widget() . "</form>";
 
         echo Nav::widget([
