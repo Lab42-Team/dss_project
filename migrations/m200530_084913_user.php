@@ -22,9 +22,12 @@ class m200530_084913_user extends Migration
             'email_confirm_token' => $this->string(),
             'password_hash' => $this->string()->notNull(),
             'password_reset_token' => $this->string(),
+            'type' => $this->smallInteger()->notNull()->defaultValue(0),
             'status' => $this->smallInteger()->notNull()->defaultValue(0),
             'full_name' => $this->string()->notNull(),
             'email' => $this->string(),
+            'discipline' => $this->string(),
+            'competence' => $this->text(),
         ], $tableOptions);
 
         $this->createIndex('idx_user_username', '{{%user}}', 'username');

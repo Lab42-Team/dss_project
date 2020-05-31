@@ -89,7 +89,6 @@ return [
     'LANG_MODEL_LOCAL' => 'Local',
     'LANG_MODEL_NAME' => 'Name',
     'LANG_MODEL_DEFAULT' => 'Default language',
-
     /* User */
     'USER_MODEL_ID' => 'ID',
     'USER_MODEL_CREATED_AT' => 'Created at',
@@ -100,11 +99,60 @@ return [
     'USER_MODEL_EMAIL_CONFIRM_TOKEN' => 'E-mail confirm token',
     'USER_MODEL_PASSWORD_HASH' => 'Password hash',
     'USER_MODEL_PASSWORD_RESET_TOKEN' => 'Password reset token',
+    'USER_MODEL_TYPE' => 'Type',
     'USER_MODEL_STATUS' => 'Status',
     'USER_MODEL_FULL_NAME' => 'Full name',
     'USER_MODEL_EMAIL' => 'E-mail',
+    'USER_MODEL_DISCIPLINE' => 'Discipline',
+    'USER_MODEL_COMPETENCE' => 'Competence',
     /* Сообщения модели User */
     'USER_MODEL_MESSAGE_USERNAME' => 'This username has already been taken.',
     'USER_MODEL_MESSAGE_UPDATED_YOUR_DETAILS' => 'You have successfully changed your details.',
     'USER_MODEL_MESSAGE_UPDATED_YOUR_PASSWORD' => 'You have successfully changed password.',
+    /* Task */
+    'TASK_MODEL_ID' => 'ID',
+    'TASK_MODEL_CREATED_AT' => 'Created at',
+    'TASK_MODEL_UPDATED_AT' => 'Updated at',
+    'TASK_MODEL_NAME' => 'Name',
+    'TASK_MODEL_DESCRIPTION' => 'Description',
+    /* Alternative */
+    'ALTERNATIVE_MODEL_ID' => 'ID',
+    'ALTERNATIVE_MODEL_CREATED_AT' => 'Created at',
+    'ALTERNATIVE_MODEL_UPDATED_AT' => 'Updated at',
+    'ALTERNATIVE_MODEL_NAME' => 'Name',
+    'ALTERNATIVE_MODEL_DESCRIPTION' => 'Description',
+    'ALTERNATIVE_MODEL_TASK' => 'Task',
+    /* Criteria */
+    'CRITERIA_MODEL_ID' => 'ID',
+    'CRITERIA_MODEL_CREATED_AT' => 'Created at',
+    'CRITERIA_MODEL_UPDATED_AT' => 'Updated at',
+    'CRITERIA_MODEL_NAME' => 'Name',
+    'CRITERIA_MODEL_DESCRIPTION' => 'Description',
+    'CRITERIA_MODEL_TASK' => 'Task',
+    /* CriteriaValue */
+    'CRITERIA_VALUE_MODEL_ID' => 'ID',
+    'CRITERIA_VALUE_MODEL_CREATED_AT' => 'Created at',
+    'CRITERIA_VALUE_MODEL_UPDATED_AT' => 'Updated at',
+    'CRITERIA_VALUE_MODEL_PRIORITY' => 'Priority',
+    'CRITERIA_VALUE_MODEL_VALUE' => 'Value',
+    'CRITERIA_VALUE_MODEL_CRITERIA' => 'Criteria',
+    /* SpecificAlternative */
+    'SPECIFIC_ALTERNATIVE_MODEL_ID' => 'ID',
+    'SPECIFIC_ALTERNATIVE_MODEL_CREATED_AT' => 'Created at',
+    'SPECIFIC_ALTERNATIVE_MODEL_UPDATED_AT' => 'Updated at',
+    'SPECIFIC_ALTERNATIVE_MODEL_ALTERNATIVE' => 'Alternative',
+    'SPECIFIC_ALTERNATIVE_MODEL_CRITERIA' => 'Criteria',
+    /* Decision */
+    'DECISION_MODEL_ID' => 'ID',
+    'DECISION_MODEL_CREATED_AT' => 'Created at',
+    'DECISION_MODEL_UPDATED_AT' => 'Updated at',
+    'DECISION_MODEL_TASK' => 'Task',
+    'DECISION_MODEL_USER' => 'User',
+    /* Evaluation */
+    'EVALUATION_MODEL_ID' => 'ID',
+    'EVALUATION_MODEL_CREATED_AT' => 'Created at',
+    'EVALUATION_MODEL_UPDATED_AT' => 'Updated at',
+    'EVALUATION_MODEL_EVALUATION' => 'Evaluation',
+    'EVALUATION_MODEL_DECISION' => 'Decision',
+    'EVALUATION_MODEL_ALTERNATIVE' => 'Alternative',
 ];

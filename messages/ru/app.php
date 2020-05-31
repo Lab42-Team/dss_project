@@ -89,7 +89,6 @@ return [
     'LANG_MODEL_LOCAL' => 'Локаль',
     'LANG_MODEL_NAME' => 'Название',
     'LANG_MODEL_DEFAULT' => 'Язык по умолчанию',
-
     /* User */
     'USER_MODEL_ID' => 'ID',
     'USER_MODEL_CREATED_AT' => 'Зарегистрирован',
@@ -100,11 +99,60 @@ return [
     'USER_MODEL_EMAIL_CONFIRM_TOKEN' => 'Метка подтверждения электронной почты',
     'USER_MODEL_PASSWORD_HASH' => 'Хэш пароля',
     'USER_MODEL_PASSWORD_RESET_TOKEN' => 'Метка сброса пароля',
+    'USER_MODEL_TYPE' => 'Тип',
     'USER_MODEL_STATUS' => 'Статус',
     'USER_MODEL_FULL_NAME' => 'Фамилия Имя Отчество',
     'USER_MODEL_EMAIL' => 'Электронная почта',
+    'USER_MODEL_DISCIPLINE' => 'Область интересов',
+    'USER_MODEL_COMPETENCE' => 'Компетентность',
     /* Сообщения модели User */
     'USER_MODEL_MESSAGE_USERNAME' => 'Это имя пользователя уже занято.',
     'USER_MODEL_MESSAGE_UPDATED_YOUR_DETAILS' => 'Вы успешно изменили свои данные.',
     'USER_MODEL_MESSAGE_UPDATED_YOUR_PASSWORD' => 'Вы успешно изменили пароль.',
+    /* Task */
+    'TASK_MODEL_ID' => 'ID',
+    'TASK_MODEL_CREATED_AT' => 'Создана',
+    'TASK_MODEL_UPDATED_AT' => 'Обновлена',
+    'TASK_MODEL_NAME' => 'Название',
+    'TASK_MODEL_DESCRIPTION' => 'Описание',
+    /* Alternative */
+    'ALTERNATIVE_MODEL_ID' => 'ID',
+    'ALTERNATIVE_MODEL_CREATED_AT' => 'Создана',
+    'ALTERNATIVE_MODEL_UPDATED_AT' => 'Обновлена',
+    'ALTERNATIVE_MODEL_NAME' => 'Название',
+    'ALTERNATIVE_MODEL_DESCRIPTION' => 'Описание',
+    'ALTERNATIVE_MODEL_TASK' => 'Задача',
+    /* Criteria */
+    'CRITERIA_MODEL_ID' => 'ID',
+    'CRITERIA_MODEL_CREATED_AT' => 'Создан',
+    'CRITERIA_MODEL_UPDATED_AT' => 'Обновлен',
+    'CRITERIA_MODEL_NAME' => 'Название',
+    'CRITERIA_MODEL_DESCRIPTION' => 'Описание',
+    'CRITERIA_MODEL_TASK' => 'Задача',
+    /* CriteriaValue */
+    'CRITERIA_VALUE_MODEL_ID' => 'ID',
+    'CRITERIA_VALUE_MODEL_CREATED_AT' => 'Создано',
+    'CRITERIA_VALUE_MODEL_UPDATED_AT' => 'Обновлено',
+    'CRITERIA_VALUE_MODEL_PRIORITY' => 'Приоритет',
+    'CRITERIA_VALUE_MODEL_VALUE' => 'Значение',
+    'CRITERIA_VALUE_MODEL_CRITERIA' => 'Критерий',
+    /* SpecificAlternative */
+    'SPECIFIC_ALTERNATIVE_MODEL_ID' => 'ID',
+    'SPECIFIC_ALTERNATIVE_MODEL_CREATED_AT' => 'Создана',
+    'SPECIFIC_ALTERNATIVE_MODEL_UPDATED_AT' => 'Обновлена',
+    'SPECIFIC_ALTERNATIVE_MODEL_ALTERNATIVE' => 'Альтернатива',
+    'SPECIFIC_ALTERNATIVE_MODEL_CRITERIA' => 'Критерий',
+    /* Decision */
+    'DECISION_MODEL_ID' => 'ID',
+    'DECISION_MODEL_CREATED_AT' => 'Создано',
+    'DECISION_MODEL_UPDATED_AT' => 'Обновлено',
+    'DECISION_MODEL_TASK' => 'Задача',
+    'DECISION_MODEL_USER' => 'Пользователь',
+    /* Evaluation */
+    'EVALUATION_MODEL_ID' => 'ID',
+    'EVALUATION_MODEL_CREATED_AT' => 'Создана',
+    'EVALUATION_MODEL_UPDATED_AT' => 'Обновлена',
+    'EVALUATION_MODEL_EVALUATION' => 'Задача',
+    'EVALUATION_MODEL_DECISION' => 'Решение',
+    'EVALUATION_MODEL_ALTERNATIVE' => 'Альтернатива',
 ];

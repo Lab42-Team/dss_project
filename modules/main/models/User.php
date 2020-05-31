@@ -20,16 +20,28 @@ use yii\behaviors\TimestampBehavior;
  * @property string $email_confirm_token
  * @property string $password_hash
  * @property string $password_reset_token
+ * @property int $type
  * @property int $status
  * @property string $full_name
  * @property string $email
+ * @property string $discipline
+ * @property string $competence
+ *
+ * @property Decision[] $decisions
  */
 class User extends ActiveRecord implements IdentityInterface
 {
-    public $password;
+    const TYPE_ADMIN  = 0; // Тип пользователя - администратор
+    const TYPE_EXPERT = 1; // Тип пользователя - эксперт
+
+    const STATUS_ACTIVE  = 0; // Активный пользователь
+    const STATUS_BLOCKED = 1; // Заблокированный пользователь
+    const STATUS_WAIT    = 2; // Неактивный пользователь (статус ожидания активации)
+
+    public $password; // Пароль
 
     /**
-     * {@inheritdoc}
+     * @return string table name
      */
     public static function tableName()
     {
@@ -37,30 +49,30 @@ class User extends ActiveRecord implements IdentityInterface
     }
 
     /**
-     * {@inheritdoc}
+     * @return array the validation rules
      */
     public function rules()
     {
         return [
-            ['username', 'required'],
+            [['username', 'full_name', 'email'], 'required'],
             ['username', 'match', 'pattern' => '#^[\w_-]+$#i'],
             ['username', 'string', 'min' => 5, 'max' => 100],
             ['username', 'unique', 'targetClass' => self::className(),
                 'message' => Yii::t('app', 'USER_MODEL_MESSAGE_USERNAME')],
             ['password', 'required', 'on' => 'create_and_update_password_hash'],
             ['password', 'string', 'min' => 5, 'on' => 'create_and_update_password_hash'],
-            [['full_name', 'email'], 'required'],
             ['full_name', 'match', 'pattern' => '/^[ А-Яа-яs,]+$/u',
                 'message' => Yii::t('app', 'USER_MODEL_MESSAGE_FULL_NAME')],
-            [['full_name'], 'string', 'min' => 5, 'max' => 100],
+            [['full_name'], 'string', 'min' => 5, 'max' => 255],
             [['email'], 'string', 'max' => 255],
-            [['status'], 'default', 'value' => null],
-            [['status'], 'integer'],
+            [['type', 'status'], 'default', 'value' => null],
+            [['type', 'status'], 'integer'],
+            [['discipline', 'competence'], 'string'],
         ];
     }
 
     /**
-     * {@inheritdoc}
+     * @return array customized attribute labels
      */
     public function attributeLabels()
     {
@@ -74,9 +86,12 @@ class User extends ActiveRecord implements IdentityInterface
             'email_confirm_token' => Yii::t('app', 'USER_MODEL_EMAIL_CONFIRM_TOKEN'),
             'password_hash' => Yii::t('app', 'USER_MODEL_PASSWORD_HASH'),
             'password_reset_token' => Yii::t('app', 'USER_MODEL_PASSWORD_RESET_TOKEN'),
+            'type' => Yii::t('app', 'USER_MODEL_TYPE'),
             'status' => Yii::t('app', 'USER_MODEL_STATUS'),
             'full_name' => Yii::t('app', 'USER_MODEL_FULL_NAME'),
             'email' => Yii::t('app', 'USER_MODEL_EMAIL'),
+            'discipline' => Yii::t('app', 'USER_MODEL_DISCIPLINE'),
+            'competence' => Yii::t('app', 'USER_MODEL_COMPETENCE'),
         ];
     }
 
@@ -283,5 +298,15 @@ class User extends ActiveRecord implements IdentityInterface
     public static function getAllUsersArray()
     {
         return ArrayHelper::map(self::find()->all(), 'id', 'username');
+    }
+
+    /**
+     * Gets query for [[Decisions]].
+     *
+     * @return \yii\db\ActiveQuery
+     */
+    public function getDecisions()
+    {
+        return $this->hasMany(Decision::className(), ['decision_id' => 'id']);
     }
 }
