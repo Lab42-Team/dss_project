@@ -3,6 +3,7 @@
 namespace app\modules\main\models;
 
 use Yii;
+use yii\helpers\ArrayHelper;
 use yii\behaviors\TimestampBehavior;
 
 /**
@@ -89,5 +90,15 @@ class Task extends \yii\db\ActiveRecord
     public function getDecisions()
     {
         return $this->hasMany(Decision::className(), ['task_id' => 'id']);
+    }
+
+    /**
+     * Получение списка всех задач.
+     *
+     * @return array - массив всех записей из таблицы dssproject_task
+     */
+    public static function getAllTasks()
+    {
+        return ArrayHelper::map(self::find()->all(), 'id', 'name');
     }
 }

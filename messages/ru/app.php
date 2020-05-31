@@ -90,6 +90,18 @@ return [
     'TASK_PAGE_MESSAGE_CREATE_TASK' => 'Вы успешно создали новую задачу.',
     'TASK_PAGE_MESSAGE_UPDATED_TASK' => 'Вы успешно обновили данную задачу.',
     'TASK_PAGE_MESSAGE_DELETED_TASK' => 'Вы успешно удалили задачу.',
+    /* Страницы раздела "Критерии" */
+    'CRITERIA_PAGE_CRITERIA' => 'Критерий',
+    'CRITERIA_PAGE_CRITERIAS' => 'Критерии',
+    'CRITERIA_PAGE_CREATE_CRITERIA' => 'Создать критерий',
+    'CRITERIA_PAGE_VIEW_CRITERIA' => 'Просмотр критерия',
+    'CRITERIA_PAGE_UPDATE_CRITERIA' => 'Изменить критерий',
+    'CRITERIA_PAGE_DELETE_CRITERIA' => 'Удалить критерий',
+    'CRITERIA_PAGE_MODAL_FORM_TEXT' => 'Вы уверены, что хотите удалить данный критерий?',
+    /* Сообщения на страницах раздела "Задачи" */
+    'CRITERIA_PAGE_MESSAGE_CREATE_CRITERIA' => 'Вы успешно создали новый критерий.',
+    'CRITERIA_PAGE_MESSAGE_UPDATED_CRITERIA' => 'Вы успешно обновили данный критерий.',
+    'CRITERIA_PAGE_MESSAGE_DELETED_CRITERIA' => 'Вы успешно удалили критерий.',
 
     /* Формы */
     /* ContactForm */

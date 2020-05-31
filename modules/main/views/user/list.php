@@ -26,12 +26,14 @@ $this->params['breadcrumbs'][] = $this->title;
             'username',
             [
                 'attribute' => 'type',
+                'format' => 'raw',
                 'value' => function($data) {
                     return $data->getTypeName();
                 },
             ],
             [
                 'attribute' => 'status',
+                'format' => 'raw',
                 'value' => function($data) {
                     return $data->getStatusName();
                 },

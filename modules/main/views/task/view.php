@@ -32,8 +32,14 @@ $this->params['breadcrumbs'][] = $this->title;
         'model' => $model,
         'attributes' => [
             'id',
-            'created_at',
-            'updated_at',
+            [
+                'attribute' => 'created_at',
+                'format' => ['date', 'dd.MM.Y HH:mm:ss']
+            ],
+            [
+                'attribute' => 'updated_at',
+                'format' => ['date', 'dd.MM.Y HH:mm:ss']
+            ],
             'name',
             'description:ntext',
         ],
