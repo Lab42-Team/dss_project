@@ -66,6 +66,18 @@ return [
     'SIGN_IN_PAGE_TEXT' => 'Пожалуйста, заполните следующие поля для входа:',
     'SIGN_IN_PAGE_RESET_TEXT' => 'Если Вы забыли свой пароль, то Вы можете',
     'SIGN_IN_PAGE_RESET_LINK' => 'сбросить его',
+    /* Страницы раздела "Пользователи" */
+    'USER_PAGE_USER' => 'Пользователь',
+    'USER_PAGE_USERS' => 'Пользователи',
+    'USER_PAGE_CREATE_USER' => 'Создать пользователя',
+    'USER_PAGE_VIEW_USER' => 'Просмотр пользователя',
+    'USER_PAGE_UPDATE_USER' => 'Изменить пользователя',
+    'USER_PAGE_DELETE_USER' => 'Удалить пользователя',
+    'USER_PAGE_MODAL_FORM_TEXT' => 'Вы уверены, что хотите удалить данного пользователя?',
+    /* Сообщения на страницах раздела "Пользователи" */
+    'USER_PAGE_MESSAGE_CREATE_USER' => 'Вы успешно создали нового пользователя.',
+    'USER_PAGE_MESSAGE_UPDATED_USER' => 'Вы успешно обновили данного пользователя.',
+    'USER_PAGE_MESSAGE_DELETED_USER' => 'Вы успешно удалили пользователя.',
     /* Страницы раздела "Задачи" */
     'TASK_PAGE_TASK' => 'Задача',
     'TASK_PAGE_TASKS' => 'Задачи',
@@ -120,6 +132,13 @@ return [
     'USER_MODEL_EMAIL' => 'Электронная почта',
     'USER_MODEL_DISCIPLINE' => 'Область интересов',
     'USER_MODEL_COMPETENCE' => 'Компетентность',
+    /* Значения типов пользователей */
+    'USER_MODEL_ADMIN_TYPE' => 'Администратор',
+    'USER_MODEL_EXPERT_TYPE' => 'Эксперт',
+    /* Значения статусов пользователей */
+    'USER_MODEL_ACTIVE_STATUS' => 'Активный',
+    'USER_MODEL_BLOCKED_STATUS' => 'Заблокированный',
+    'USER_MODEL_WAIT_STATUS' => 'В ожидании',
     /* Сообщения модели User */
     'USER_MODEL_MESSAGE_USERNAME' => 'Это имя пользователя уже занято.',
     'USER_MODEL_MESSAGE_UPDATED_YOUR_DETAILS' => 'Вы успешно изменили свои данные.',

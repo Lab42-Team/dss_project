@@ -66,6 +66,18 @@ return [
     'SIGN_IN_PAGE_TEXT' => 'Please fill out the following fields to sign in:',
     'SIGN_IN_PAGE_RESET_TEXT' => 'If you forgot your password you can',
     'SIGN_IN_PAGE_RESET_LINK' => 'reset it',
+    /* Страницы раздела "Пользователи" */
+    'USER_PAGE_USER' => 'User',
+    'USER_PAGE_USERS' => 'Users',
+    'USER_PAGE_CREATE_USER' => 'Create user',
+    'USER_PAGE_VIEW_USER' => 'View user',
+    'USER_PAGE_UPDATE_USER' => 'Update user',
+    'USER_PAGE_DELETE_USER' => 'Delete user',
+    'USER_PAGE_MODAL_FORM_TEXT' => 'Are you sure that you want to delete this user?',
+    /* Сообщения на страницах раздела "Пользователи" */
+    'USER_PAGE_MESSAGE_CREATE_USER' => 'You have successfully created a new user.',
+    'USER_PAGE_MESSAGE_UPDATED_USER' => 'You have successfully updated user.',
+    'USER_PAGE_MESSAGE_DELETED_USER' => 'You have successfully deleted user.',
     /* Страницы раздела "Задачи" */
     'TASK_PAGE_TASK' => 'Task',
     'TASK_PAGE_TASKS' => 'Tasks',
@@ -120,6 +132,13 @@ return [
     'USER_MODEL_EMAIL' => 'E-mail',
     'USER_MODEL_DISCIPLINE' => 'Discipline',
     'USER_MODEL_COMPETENCE' => 'Competence',
+    /* Значения типов пользователей */
+    'USER_MODEL_ADMIN_TYPE' => 'Administrator',
+    'USER_MODEL_EXPERT_TYPE' => 'Expert',
+    /* Значения статусов пользователей */
+    'USER_MODEL_ACTIVE_STATUS' => 'Active',
+    'USER_MODEL_BLOCKED_STATUS' => 'Blocked',
+    'USER_MODEL_WAIT_STATUS' => 'Waiting',
     /* Сообщения модели User */
     'USER_MODEL_MESSAGE_USERNAME' => 'This username has already been taken.',
     'USER_MODEL_MESSAGE_UPDATED_YOUR_DETAILS' => 'You have successfully changed your details.',

@@ -54,7 +54,7 @@ class User extends ActiveRecord implements IdentityInterface
     public function rules()
     {
         return [
-            [['username', 'full_name', 'email'], 'required'],
+            [['username', 'full_name'], 'required'],
             ['username', 'match', 'pattern' => '#^[\w_-]+$#i'],
             ['username', 'string', 'min' => 5, 'max' => 100],
             ['username', 'unique', 'targetClass' => self::className(),
@@ -308,5 +308,52 @@ class User extends ActiveRecord implements IdentityInterface
     public function getDecisions()
     {
         return $this->hasMany(Decision::className(), ['decision_id' => 'id']);
+    }
+
+    /**
+     * Получение списка типов пользователей.
+     *
+     * @return array - массив всех возможных типов пользователей
+     */
+    public static function getTypes()
+    {
+        return [
+            self::TYPE_ADMIN => Yii::t('app', 'USER_MODEL_ADMIN_TYPE'),
+            self::TYPE_EXPERT => Yii::t('app', 'USER_MODEL_EXPERT_TYPE'),
+        ];
+    }
+
+    /**
+     * Получение названия типа пользователя.
+     *
+     * @return mixed
+     */
+    public function getTypeName()
+    {
+        return ArrayHelper::getValue(self::getTypes(), $this->type);
+    }
+
+    /**
+     * Получение списка статусов пользователей.
+     *
+     * @return array - массив всех возможных статусов пользователей
+     */
+    public static function getStatuses()
+    {
+        return [
+            self::STATUS_ACTIVE => Yii::t('app', 'USER_MODEL_ACTIVE_STATUS'),
+            self::STATUS_BLOCKED => Yii::t('app', 'USER_MODEL_BLOCKED_STATUS'),
+            self::STATUS_WAIT => Yii::t('app', 'USER_MODEL_WAIT_STATUS'),
+        ];
+    }
+
+    /**
+     * Получение названия статуса пользователя.
+     *
+     * @return mixed
+     */
+    public function getStatusName()
+    {
+        return ArrayHelper::getValue(self::getStatuses(), $this->status);
     }
 }

@@ -38,6 +38,8 @@ $config = [
                 '/' => 'main/default/index',
                 'contact' => 'main/default/contact',
                 'sing-in' => 'main/default/sing-in',
+                '/user/<_us:(list|create)>' => 'main/user/<_us>',
+                '/user/<_us:(view|update|delete)>/<id:\d+>' => 'main/user/<_us>',
                 '/task/<_ts:(list|create)>' => 'main/task/<_ts>',
                 '/task/<_ts:(view|update|delete)>/<id:\d+>' => 'main/task/<_ts>',
             ],
