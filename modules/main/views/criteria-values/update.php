@@ -9,7 +9,7 @@ $this->title = Yii::t('app', 'CRITERIA_VALUE_PAGE_UPDATE_CRITERIA_VALUE') . ': '
 $this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'CRITERIA_VALUE_PAGE_CRITERIA_VALUES'),
     'url' => ['list']];
 $this->params['breadcrumbs'][] = ['label' => $model->value, 'url' => ['view', 'id' => $model->id]];
-$this->params['breadcrumbs'][] = 'Update';
+$this->params['breadcrumbs'][] = Yii::t('app', 'CRITERIA_VALUE_PAGE_UPDATE_CRITERIA_VALUE');
 ?>
 
 <div class="criteria-value-update">

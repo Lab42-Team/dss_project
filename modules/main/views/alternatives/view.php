@@ -4,18 +4,18 @@ use yii\helpers\Html;
 use yii\widgets\DetailView;
 
 /* @var $this yii\web\View */
-/* @var $model app\modules\main\models\CriteriaValue */
+/* @var $model app\modules\main\models\Alternative */
 
-$this->title = Yii::t('app', 'CRITERIA_VALUE_PAGE_VIEW_CRITERIA_VALUE') . ': ' . $model->value;
-$this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'CRITERIA_VALUE_PAGE_CRITERIA_VALUES'),
+$this->title = Yii::t('app', 'ALTERNATIVE_PAGE_VIEW_ALTERNATIVE') . ': ' . $model->name;
+$this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'ALTERNATIVE_PAGE_ALTERNATIVES'),
     'url' => ['list']];
 $this->params['breadcrumbs'][] = $this->title;
 \yii\web\YiiAsset::register($this);
 ?>
 
-<div class="criteria-value-view">
+<div class="alternative-view">
 
-    <h1><?= Yii::t('app', 'CRITERIA_VALUE_PAGE_CRITERIA_VALUE') . ': ' . $model->value ?></h1>
+    <h1><?= Yii::t('app', 'ALTERNATIVE_PAGE_ALTERNATIVE') . ': ' . $model->name ?></h1>
 
     <p>
         <?= Html::a(Yii::t('app', 'BUTTON_UPDATE'), ['update', 'id' => $model->id],
@@ -23,7 +23,7 @@ $this->params['breadcrumbs'][] = $this->title;
         <?= Html::a(Yii::t('app', 'BUTTON_DELETE'), ['delete', 'id' => $model->id], [
             'class' => 'btn btn-danger',
             'data' => [
-                'confirm' => Yii::t('app', 'CRITERIA_VALUE_PAGE_MODAL_FORM_TEXT'),
+                'confirm' => Yii::t('app', 'ALTERNATIVE_PAGE_MODAL_FORM_TEXT'),
                 'method' => 'post',
             ],
         ]) ?>
@@ -42,11 +42,11 @@ $this->params['breadcrumbs'][] = $this->title;
                 'format' => ['date', 'dd.MM.Y HH:mm:ss']
             ],
             [
-                'attribute'=>'criteria_id',
-                'value' => $model->criteria->name,
+                'attribute'=>'task_id',
+                'value' => $model->task->name,
             ],
-            'value:ntext',
-            'priority',
+            'name',
+            'description:ntext',
         ],
     ]) ?>
 

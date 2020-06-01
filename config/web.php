@@ -46,6 +46,8 @@ $config = [
                 '/criteria/<_cr:(view|update|delete)>/<id:\d+>' => 'main/criteria/<_cr>',
                 '/criteria-values/<_crv:(list|create)>' => 'main/criteria-values/<_crv>',
                 '/criteria-values/<_crv:(view|update|delete)>/<id:\d+>' => 'main/criteria-values/<_crv>',
+                '/alternatives/<_al:(list|create)>' => 'main/alternatives/<_al>',
+                '/alternatives/<_al:(view|update|delete)>/<id:\d+>' => 'main/alternatives/<_al>',
             ],
         ],
         'cache' => [

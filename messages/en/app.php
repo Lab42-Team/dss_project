@@ -121,6 +121,18 @@ return [
     'CRITERIA_VALUE_PAGE_MESSAGE_CREATE_CRITERIA_VALUE' => 'You have successfully created a new criteria value.',
     'CRITERIA_VALUE_PAGE_MESSAGE_UPDATED_CRITERIA_VALUE' => 'You have successfully updated criteria value.',
     'CRITERIA_VALUE_PAGE_MESSAGE_DELETED_CRITERIA_VALUE' => 'You have successfully deleted criteria value.',
+    /* Страницы раздела "Альтернативы" */
+    'ALTERNATIVE_PAGE_ALTERNATIVE' => 'Alternative',
+    'ALTERNATIVE_PAGE_ALTERNATIVES' => 'Alternatives',
+    'ALTERNATIVE_PAGE_CREATE_ALTERNATIVE' => 'Create alternative',
+    'ALTERNATIVE_PAGE_VIEW_ALTERNATIVE' => 'View alternative',
+    'ALTERNATIVE_PAGE_UPDATE_ALTERNATIVE' => 'Update alternative',
+    'ALTERNATIVE_PAGE_DELETE_ALTERNATIVE' => 'Delete alternative',
+    'ALTERNATIVE_PAGE_MODAL_FORM_TEXT' => 'Are you sure that you want to delete this alternative?',
+    /* Сообщения на страницах раздела "Альтернативы" */
+    'ALTERNATIVE_PAGE_MESSAGE_CREATE_ALTERNATIVE' => 'You have successfully created a new alternative.',
+    'ALTERNATIVE_PAGE_MESSAGE_UPDATED_ALTERNATIVE' => 'You have successfully updated alternative.',
+    'ALTERNATIVE_PAGE_MESSAGE_DELETED_ALTERNATIVE' => 'You have successfully deleted alternative.',
 
     /* Формы */
     /* ContactForm */

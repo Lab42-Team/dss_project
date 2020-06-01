@@ -14,7 +14,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
 <div class="task-view">
 
-    <h1><?= Html::encode($this->title) ?></h1>
+    <h1><?= Yii::t('app', 'TASK_PAGE_TASK') . ': ' . $model->name ?></h1>
 
     <p>
         <?= Html::a(Yii::t('app', 'BUTTON_UPDATE'), ['update', 'id' => $model->id],

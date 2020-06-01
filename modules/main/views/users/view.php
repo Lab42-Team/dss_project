@@ -13,7 +13,7 @@ $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="user-view">
 
-    <h1><?= Html::encode($this->title) ?></h1>
+    <h1><?= Yii::t('app', 'USER_PAGE_USER') . ': ' . $model->username ?></h1>
 
     <p>
         <?= Html::a(Yii::t('app', 'BUTTON_UPDATE'), ['update', 'id' => $model->id],
