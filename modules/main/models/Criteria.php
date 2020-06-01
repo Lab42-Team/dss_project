@@ -3,6 +3,7 @@
 namespace app\modules\main\models;
 
 use Yii;
+use yii\helpers\ArrayHelper;
 use yii\behaviors\TimestampBehavior;
 
 /**
@@ -95,5 +96,15 @@ class Criteria extends \yii\db\ActiveRecord
     public function getSpecificAlternatives()
     {
         return $this->hasMany(SpecificAlternative::className(), ['criteria_id' => 'id']);
+    }
+
+    /**
+     * Получение списка всех критериев.
+     *
+     * @return array - массив всех записей из таблицы dssproject_criteria
+     */
+    public static function getAllCriteria()
+    {
+        return ArrayHelper::map(self::find()->all(), 'id', 'name');
     }
 }

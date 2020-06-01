@@ -105,10 +105,22 @@ return [
     'CRITERIA_PAGE_UPDATE_CRITERIA' => 'Изменить критерий',
     'CRITERIA_PAGE_DELETE_CRITERIA' => 'Удалить критерий',
     'CRITERIA_PAGE_MODAL_FORM_TEXT' => 'Вы уверены, что хотите удалить данный критерий?',
-    /* Сообщения на страницах раздела "Задачи" */
+    /* Сообщения на страницах раздела "Критерии" */
     'CRITERIA_PAGE_MESSAGE_CREATE_CRITERIA' => 'Вы успешно создали новый критерий.',
     'CRITERIA_PAGE_MESSAGE_UPDATED_CRITERIA' => 'Вы успешно обновили данный критерий.',
     'CRITERIA_PAGE_MESSAGE_DELETED_CRITERIA' => 'Вы успешно удалили критерий.',
+    /* Страницы раздела "Значения критериев" */
+    'CRITERIA_VALUE_PAGE_CRITERIA_VALUE' => 'Значение критерия',
+    'CRITERIA_VALUE_PAGE_CRITERIA_VALUES' => 'Значения критериев',
+    'CRITERIA_VALUE_PAGE_CREATE_CRITERIA_VALUE' => 'Создать значение критерия',
+    'CRITERIA_VALUE_PAGE_VIEW_CRITERIA_VALUE' => 'Просмотр значения критерия',
+    'CRITERIA_VALUE_PAGE_UPDATE_CRITERIA_VALUE' => 'Изменить значение критерия',
+    'CRITERIA_VALUE_PAGE_DELETE_CRITERIA_VALUE' => 'Удалить значение критерия',
+    'CRITERIA_VALUE_PAGE_MODAL_FORM_TEXT' => 'Вы уверены, что хотите удалить данное значение критерия?',
+    /* Сообщения на страницах раздела "Значения критериев" */
+    'CRITERIA_VALUE_PAGE_MESSAGE_CREATE_CRITERIA_VALUE' => 'Вы успешно создали новое значение критерия.',
+    'CRITERIA_VALUE_PAGE_MESSAGE_UPDATED_CRITERIA_VALUE' => 'Вы успешно обновили данное значение критерия.',
+    'CRITERIA_VALUE_PAGE_MESSAGE_DELETED_CRITERIA_VALUE' => 'Вы успешно удалили значение критерия.',
 
     /* Формы */
     /* ContactForm */

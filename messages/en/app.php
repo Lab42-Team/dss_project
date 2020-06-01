@@ -105,10 +105,22 @@ return [
     'CRITERIA_PAGE_UPDATE_CRITERIA' => 'Update criteria',
     'CRITERIA_PAGE_DELETE_CRITERIA' => 'Delete criteria',
     'CRITERIA_PAGE_MODAL_FORM_TEXT' => 'Are you sure that you want to delete this criteria?',
-    /* Сообщения на страницах раздела "Задачи" */
+    /* Сообщения на страницах раздела "Критерии" */
     'CRITERIA_PAGE_MESSAGE_CREATE_CRITERIA' => 'You have successfully created a new criteria.',
     'CRITERIA_PAGE_MESSAGE_UPDATED_CRITERIA' => 'You have successfully updated criteria.',
     'CRITERIA_PAGE_MESSAGE_DELETED_CRITERIA' => 'You have successfully deleted criteria.',
+    /* Страницы раздела "Значения критериев" */
+    'CRITERIA_VALUE_PAGE_CRITERIA_VALUE' => 'Criteria value',
+    'CRITERIA_VALUE_PAGE_CRITERIA_VALUES' => 'Criteria values',
+    'CRITERIA_VALUE_PAGE_CREATE_CRITERIA_VALUE' => 'Create criteria value',
+    'CRITERIA_VALUE_PAGE_VIEW_CRITERIA_VALUE' => 'View criteria value',
+    'CRITERIA_VALUE_PAGE_UPDATE_CRITERIA_VALUE' => 'Update criteria value',
+    'CRITERIA_VALUE_PAGE_DELETE_CRITERIA_VALUE' => 'Delete criteria value',
+    'CRITERIA_VALUE_PAGE_MODAL_FORM_TEXT' => 'Are you sure that you want to delete this criteria value?',
+    /* Сообщения на страницах раздела "Значения критериев" */
+    'CRITERIA_VALUE_PAGE_MESSAGE_CREATE_CRITERIA_VALUE' => 'You have successfully created a new criteria value.',
+    'CRITERIA_VALUE_PAGE_MESSAGE_UPDATED_CRITERIA_VALUE' => 'You have successfully updated criteria value.',
+    'CRITERIA_VALUE_PAGE_MESSAGE_DELETED_CRITERIA_VALUE' => 'You have successfully deleted criteria value.',
 
     /* Формы */
     /* ContactForm */

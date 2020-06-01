@@ -6,7 +6,7 @@ use yii\widgets\DetailView;
 /* @var $this yii\web\View */
 /* @var $model app\modules\main\models\User */
 
-$this->title = $model->username;
+$this->title = Yii::t('app', 'USER_PAGE_VIEW_USER') . ': ' . $model->username;
 $this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'USER_PAGE_USERS'), 'url' => ['list']];
 $this->params['breadcrumbs'][] = $this->title;
 \yii\web\YiiAsset::register($this);
