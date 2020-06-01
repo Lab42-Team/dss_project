@@ -11,8 +11,15 @@ return [
     'NAV_SIGN_UP' => 'Регистрация',
     'NAV_SIGN_IN' => 'Вход',
     'NAV_SIGN_OUT' => 'Выход',
-    'NAV_SOURCE_DATA' => 'Исходные данные',
     'NAV_USERS' => 'Пользователи',
+    'NAV_SOURCE_DATA' => 'Исходные данные',
+    'NAV_TASKS' => 'Задачи',
+    'NAV_CRITERIA' => 'Критерии',
+    'NAV_CRITERIA_VALUES' => 'Значения критериев',
+    'NAV_ALTERNATIVES' => 'Альтернативы',
+    'NAV_RESULTS' => 'Полученные результаты',
+    'NAV_DECISIONS' => 'Решения',
+    'NAV_EVALUATIONS' => 'Оценки',
 
     /* Пункты правого меню */
     'SIDE_NAV_POSSIBLE_ACTIONS' => 'Возможные действия',

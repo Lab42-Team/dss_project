@@ -2,7 +2,7 @@
 
 /* @var $this yii\web\View */
 
-$this->title = 'Decision Support System - ARAMIS';
+$this->title = 'Decision Support System';
 ?>
 
 <div class="main-default-index">

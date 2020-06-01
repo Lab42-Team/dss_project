@@ -5,7 +5,7 @@ $db = require __DIR__ . '/db.php';
 
 $config = [
     'id' => 'dssproject',
-    'name' => 'Decision Support System',
+    'name' => 'DSS',
     'defaultRoute' => 'main/default/index',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],

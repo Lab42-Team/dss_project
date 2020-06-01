@@ -42,19 +42,26 @@ AppAsset::register($this);
             'options' => ['class' => 'navbar-nav navbar-left'],
             'encodeLabels' => false,
             'items' => array_filter([
+                !Yii::$app->user->isGuest ? ['label' => '<span class="glyphicon glyphicon-user"></span> ' .
+                    Yii::t('app', 'NAV_USERS'), 'url' => ['/user/list']] : false,
                 !Yii::$app->user->isGuest ? ['label' => '<span class="glyphicon glyphicon-list-alt"></span> ' .
                     Yii::t('app', 'NAV_SOURCE_DATA'), 'url' => '#',
                     'items' => [
-                        ['label' => 'Задачи', 'url' => ['/task/list']],
-                        ['label' => 'Критерии', 'url' => ['/criteria/list']],
-                        ['label' => 'Альтернативы', 'url' => ['/alternative/list']],
-                        ['label' => 'Решения', 'url' => ['/decision/list']],
-                        ['label' => 'Оценки', 'url' => ['/evaluation/list']],
+                        ['label' => Yii::t('app', 'NAV_TASKS'), 'url' => ['/task/list']],
+                        ['label' => Yii::t('app', 'NAV_CRITERIA'), 'url' => ['/criteria/list']],
+                        ['label' => Yii::t('app', 'NAV_CRITERIA_VALUES'),
+                            'url' => ['/criteria-value/list']],
+                        ['label' => Yii::t('app', 'NAV_ALTERNATIVES'),
+                            'url' => ['/alternative/list']],
                     ],
                 ] : false,
-                !Yii::$app->user->isGuest ? ['label' => '<span class="glyphicon glyphicon-user"></span> ' .
-                    Yii::t('app', 'NAV_USERS'), 'url' => ['/user/list']] : false,
-
+                !Yii::$app->user->isGuest ? ['label' => '<span class="glyphicon glyphicon-th-list"></span> ' .
+                    Yii::t('app', 'NAV_RESULTS'), 'url' => '#',
+                    'items' => [
+                        ['label' => Yii::t('app', 'NAV_DECISIONS'), 'url' => ['/decision/list']],
+                        ['label' => Yii::t('app', 'NAV_EVALUATIONS'), 'url' => ['/evaluation/list']],
+                    ],
+                ] : false,
             ]),
         ]);
 
