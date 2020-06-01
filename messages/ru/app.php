@@ -129,6 +129,9 @@ return [
     'ALTERNATIVE_PAGE_UPDATE_ALTERNATIVE' => 'Изменить альтернативу',
     'ALTERNATIVE_PAGE_DELETE_ALTERNATIVE' => 'Удалить альтернативу',
     'ALTERNATIVE_PAGE_MODAL_FORM_TEXT' => 'Вы уверены, что хотите удалить данную альтернативу?',
+    'ALTERNATIVE_PAGE_CRITERIA_LIST' => 'Список критериев',
+    'ALTERNATIVE_PAGE_ADD_CRITERIA' => 'Добавить критерий',
+    'ALTERNATIVE_PAGE_CRITERIA_NUMBER' => 'Критерий №',
     /* Сообщения на страницах раздела "Альтернативы" */
     'ALTERNATIVE_PAGE_MESSAGE_CREATE_ALTERNATIVE' => 'Вы успешно создали новую альтернативу.',
     'ALTERNATIVE_PAGE_MESSAGE_UPDATED_ALTERNATIVE' => 'Вы успешно обновили данную альтернативу.',

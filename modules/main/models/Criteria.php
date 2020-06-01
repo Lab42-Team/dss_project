@@ -105,6 +105,6 @@ class Criteria extends \yii\db\ActiveRecord
      */
     public static function getAllCriteria()
     {
-        return ArrayHelper::map(self::find()->all(), 'id', 'name');
+        return ArrayHelper::map(self::find()->all(), 'id', 'name', 'task.name');
     }
 }

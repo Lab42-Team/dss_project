@@ -3,11 +3,12 @@
 namespace app\modules\main\controllers;
 
 use Yii;
-use app\modules\main\models\Alternative;
 use yii\data\ActiveDataProvider;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use app\modules\main\models\Alternative;
+use app\modules\main\models\SpecificAlternative;
 
 /**
  * AlternativesController implements the CRUD actions for Alternative model.
@@ -54,54 +55,81 @@ class AlternativesController extends Controller
      */
     public function actionView($id)
     {
+        // Нахождение альтернативы по id
+        $model = $this->findModel($id);
+        // Выборка определенных альтернатив по внешнему ключу альтернативы
+        $specificAlternatives = SpecificAlternative::find()->where(array('alternative_id' => $model->id))->all();
+
         return $this->render('view', [
-            'model' => $this->findModel($id),
+            'model' => $model,
+            'specificAlternatives' => $specificAlternatives,
         ]);
     }
 
     /**
      * Creates a new Alternative model.
      * If creation is successful, the browser will be redirected to the 'view' page.
-     * @return mixed
+     * @return string|\yii\web\Response
+     * @throws \yii\db\Exception
      */
     public function actionCreate()
     {
+        // Создание модели альтернативы
         $model = new Alternative();
-
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            // Вывод сообщения об удачном создании
-            Yii::$app->getSession()->setFlash('success',
-                Yii::t('app', 'ALTERNATIVE_PAGE_MESSAGE_CREATE_ALTERNATIVE'));
+        // Создание массива с моделями определенных альтернатив
+        $specificAlternativeModels = [new SpecificAlternative()];
+        // Массовая загрузка данных в модели
+        if ($model->loadAll(Yii::$app->request->post()) && $model->save()) {
+            // Обновление значений "alternative_id" в массиве request
+            for ($i = 1; $i <= 100; $i++)
+                if (isset(Yii::$app->request->post('SpecificAlternative')[$i]))
+                    Yii::$app->request->post('SpecificAlternative')[$i]['alternative_id'] = $model->id;
+            // Сохранение связанных моделей SpecificAlternative
+            if ($model->saveAll())
+                // Вывод сообщения об удачном создании
+                Yii::$app->getSession()->setFlash('success',
+                    Yii::t('app', 'ALTERNATIVE_PAGE_MESSAGE_CREATE_ALTERNATIVE'));
 
             return $this->redirect(['view', 'id' => $model->id]);
         }
 
         return $this->render('create', [
             'model' => $model,
+            'specificAlternativeModels' => $specificAlternativeModels,
         ]);
     }
 
     /**
      * Updates an existing Alternative model.
      * If update is successful, the browser will be redirected to the 'view' page.
-     * @param integer $id
-     * @return mixed
-     * @throws NotFoundHttpException if the model cannot be found
+     * @param $id
+     * @return string|\yii\web\Response
+     * @throws NotFoundHttpException
+     * @throws \yii\db\Exception
      */
     public function actionUpdate($id)
     {
         $model = $this->findModel($id);
-
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            // Вывод сообщения об удачном обновлении
-            Yii::$app->getSession()->setFlash('success',
-                Yii::t('app', 'ALTERNATIVE_PAGE_MESSAGE_UPDATED_ALTERNATIVE'));
+        // Формирование массива с моделями определенных альтернатив
+        $specificAlternativeModels = SpecificAlternative::find()->where(array('alternative_id' => $model->id))->all();
+        // Массовая загрузка данных в модели
+        if ($model->loadAll(Yii::$app->request->post()) && $model->save()) {
+            // Обновление значений "alternative_id" в массиве request
+            for ($i = 1; $i <= 100; $i++)
+                if (isset(Yii::$app->request->post('SpecificAlternative')[$i]))
+                    Yii::$app->request->post('SpecificAlternative')[$i]['alternative_id'] = $model->id;
+            // Сохранение связанных моделей SpecificAlternative
+            if ($model->saveAll())
+                // Вывод сообщения об удачном обновлении
+                Yii::$app->getSession()->setFlash('success',
+                    Yii::t('app', 'ALTERNATIVE_PAGE_MESSAGE_UPDATED_ALTERNATIVE'));
 
             return $this->redirect(['view', 'id' => $model->id]);
         }
 
         return $this->render('update', [
             'model' => $model,
+            'specificAlternativeModels' => $specificAlternativeModels,
         ]);
     }
 

@@ -1,10 +1,12 @@
 <?php
 
+use yii\bootstrap\Tabs;
 use yii\helpers\Html;
 use yii\widgets\DetailView;
 
 /* @var $this yii\web\View */
 /* @var $model app\modules\main\models\Alternative */
+/* @var $specificAlternatives app\modules\main\models\SpecificAlternative */
 
 $this->title = Yii::t('app', 'ALTERNATIVE_PAGE_VIEW_ALTERNATIVE') . ': ' . $model->name;
 $this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'ALTERNATIVE_PAGE_ALTERNATIVES'),
@@ -49,5 +51,21 @@ $this->params['breadcrumbs'][] = $this->title;
             'description:ntext',
         ],
     ]) ?>
+
+    <?php
+        $items = array();
+        foreach ($specificAlternatives as $specificAlternative) {
+            $item = [
+                'label' => $specificAlternative->criteria->name,
+                'content' => $this->render('_criteria', [
+                    'specificAlternative' => $specificAlternative
+                ]),
+            ];
+            array_push($items, $item);
+        }
+        echo Tabs::widget([
+            'items' => $items
+        ]);
+    ?>
 
 </div>

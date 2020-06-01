@@ -20,6 +20,8 @@ use yii\behaviors\TimestampBehavior;
  */
 class Alternative extends \yii\db\ActiveRecord
 {
+    use \mootensai\relation\RelationTrait;
+
     /**
      * @return string table name
      */

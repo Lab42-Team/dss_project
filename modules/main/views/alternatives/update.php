@@ -4,6 +4,7 @@ use yii\helpers\Html;
 
 /* @var $this yii\web\View */
 /* @var $model app\modules\main\models\Alternative */
+/* @var $specificAlternativeModels app\modules\main\models\SpecificAlternative */
 
 $this->title = Yii::t('app', 'ALTERNATIVE_PAGE_UPDATE_ALTERNATIVE') . ': ' . $model->name;
 $this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'ALTERNATIVE_PAGE_ALTERNATIVES'),
@@ -18,6 +19,7 @@ $this->params['breadcrumbs'][] = Yii::t('app', 'ALTERNATIVE_PAGE_UPDATE_ALTERNAT
 
     <?= $this->render('_form', [
         'model' => $model,
+        'specificAlternativeModels' => $specificAlternativeModels,
     ]) ?>
 
 </div>
