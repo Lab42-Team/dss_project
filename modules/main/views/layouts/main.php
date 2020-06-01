@@ -43,23 +43,23 @@ AppAsset::register($this);
             'encodeLabels' => false,
             'items' => array_filter([
                 !Yii::$app->user->isGuest ? ['label' => '<span class="glyphicon glyphicon-user"></span> ' .
-                    Yii::t('app', 'NAV_USERS'), 'url' => ['/user/list']] : false,
+                    Yii::t('app', 'NAV_USERS'), 'url' => ['/users/list']] : false,
                 !Yii::$app->user->isGuest ? ['label' => '<span class="glyphicon glyphicon-list-alt"></span> ' .
                     Yii::t('app', 'NAV_SOURCE_DATA'), 'url' => '#',
                     'items' => [
-                        ['label' => Yii::t('app', 'NAV_TASKS'), 'url' => ['/task/list']],
+                        ['label' => Yii::t('app', 'NAV_TASKS'), 'url' => ['/tasks/list']],
                         ['label' => Yii::t('app', 'NAV_CRITERIA'), 'url' => ['/criteria/list']],
                         ['label' => Yii::t('app', 'NAV_CRITERIA_VALUES'),
-                            'url' => ['/criteria-value/list']],
+                            'url' => ['/criteria-values/list']],
                         ['label' => Yii::t('app', 'NAV_ALTERNATIVES'),
-                            'url' => ['/alternative/list']],
+                            'url' => ['/alternatives/list']],
                     ],
                 ] : false,
                 !Yii::$app->user->isGuest ? ['label' => '<span class="glyphicon glyphicon-th-list"></span> ' .
                     Yii::t('app', 'NAV_RESULTS'), 'url' => '#',
                     'items' => [
-                        ['label' => Yii::t('app', 'NAV_DECISIONS'), 'url' => ['/decision/list']],
-                        ['label' => Yii::t('app', 'NAV_EVALUATIONS'), 'url' => ['/evaluation/list']],
+                        ['label' => Yii::t('app', 'NAV_DECISIONS'), 'url' => ['/decisions/list']],
+                        ['label' => Yii::t('app', 'NAV_EVALUATIONS'), 'url' => ['/evaluations/list']],
                     ],
                 ] : false,
             ]),

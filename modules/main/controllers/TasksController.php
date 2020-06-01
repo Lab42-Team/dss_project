@@ -10,9 +10,9 @@ use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
 /**
- * TaskController implements the CRUD actions for Task model.
+ * TasksController implements the CRUD actions for Task model.
  */
-class TaskController extends Controller
+class TasksController extends Controller
 {
     public $layout = 'main';
 
