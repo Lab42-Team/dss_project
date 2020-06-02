@@ -28,9 +28,10 @@ class UserController extends Controller
         $model->username = 'admin';
         $model->setPassword('admin');
         $model->generateAuthKey();
+        $model->type = User::TYPE_ADMIN;
+        $model->status = User::STATUS_ACTIVE;
         $model->full_name = 'Иванов Иван Иванович';
         $model->email = 'dss-project@gmail.com';
-        $model->status = 0;
         $this->log($model->save());
     }
 
