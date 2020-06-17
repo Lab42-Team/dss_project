@@ -15,22 +15,21 @@ class Solver
      */
     public function getRanksByAramis($sourceArray)
     {
-        $bestAlternative = [];
-        $worstAlternative = [];
+        $bestAlternative = array();
+        $worstAlternative = array();
 
         $maxMark = array_sum($sourceArray[0][0]);
 
         for ($i = 0; $i < count($sourceArray[0]); $i++) {
-            $lenCriterial = count($sourceArray[0][$i]);
-            for ($j = 0; $j < $lenCriterial; $j++) {
-                //worst
-                $worstAlternative[$i][$j] = ($j == $lenCriterial - 1) ? $maxMark : 0;
-                //best
-                if ($j == 0) {
+            $lenCriteria = count($sourceArray[0][$i]);
+            for ($j = 0; $j < $lenCriteria; $j++) {
+                // worst
+                $worstAlternative[$i][$j] = ($j == $lenCriteria - 1) ? $maxMark : 0;
+                // best
+                if ($j == 0)
                     $bestAlternative[$i][$j] = $maxMark;
-                } else {
+                else
                     $bestAlternative[$i][$j] = 0;
-                }
             }
         }
 
@@ -46,7 +45,6 @@ class Solver
                 for ($item = 0; $item < count($sourceArray[$row][$column]); $item++) {
                     $summ['best'][$row] = $summ['best'][$row] + abs($bestAlternative[$column][$item] -
                             $sourceArray[$row][$column][$item]);
-
                     $summ['worst'][$row] = $summ['worst'][$row] + abs($worstAlternative[$column][$item] -
                             $sourceArray[$row][$column][$item]);
                 }
@@ -57,18 +55,6 @@ class Solver
         for ($i = 0; $i < count($sourceArray); $i++)
             $result[$i] = round($summ['best'][$i] / ($summ['best'][$i] + $summ['worst'][$i]), 3);
 
-        $rankedAlternatives = $result;
-
-        for ($j = 0; $j < count($rankedAlternatives) - 1; $j++) {
-            for ($i = 0; $i < count($rankedAlternatives) - $j - 1; $i++) {
-                if ($rankedAlternatives[$i] < $rankedAlternatives[$i + 1]) {
-                    $temp = $rankedAlternatives[$i + 1];
-                    $rankedAlternatives[$i + 1] = $rankedAlternatives[$i];
-                    $rankedAlternatives[$i] = $temp;
-                }
-            }
-        }
-
-        return $rankedAlternatives;
+        return $result;
     }
 }
