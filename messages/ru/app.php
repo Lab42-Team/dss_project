@@ -43,6 +43,7 @@ return [
     'BUTTON_IMPORT' => 'Импортировать',
     'BUTTON_EXPORT' => 'Экспортировать',
     'BUTTON_RETURN' => 'Вернуться к',
+    'BUTTON_CALCULATE' => 'Вычислить',
 
     /* Общие сообщения об ошибках */
     'ERROR_MESSAGE_PAGE_NOT_FOUND' => 'Страница не найдена.',
@@ -93,10 +94,12 @@ return [
     'TASK_PAGE_UPDATE_TASK' => 'Изменить задачу',
     'TASK_PAGE_DELETE_TASK' => 'Удалить задачу',
     'TASK_PAGE_MODAL_FORM_TEXT' => 'Вы уверены, что хотите удалить данную задачу?',
+    'TASK_PAGE_SOLVE_TASK' => 'Решение задачи',
     /* Сообщения на страницах раздела "Задачи" */
     'TASK_PAGE_MESSAGE_CREATE_TASK' => 'Вы успешно создали новую задачу.',
     'TASK_PAGE_MESSAGE_UPDATED_TASK' => 'Вы успешно обновили данную задачу.',
     'TASK_PAGE_MESSAGE_DELETED_TASK' => 'Вы успешно удалили задачу.',
+    'TASK_PAGE_MESSAGE_SOLVED_TASK' => 'Вы успешно решили задачу!',
     /* Страницы раздела "Критерии" */
     'CRITERIA_PAGE_CRITERIA' => 'Критерий',
     'CRITERIA_PAGE_CRITERIAS' => 'Критерии',

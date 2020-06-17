@@ -43,6 +43,7 @@ return [
     'BUTTON_IMPORT' => 'Import',
     'BUTTON_EXPORT' => 'Export',
     'BUTTON_RETURN' => 'Return to',
+    'BUTTON_CALCULATE' => 'Calculate',
 
     /* Общие сообщения об ошибках */
     'ERROR_MESSAGE_PAGE_NOT_FOUND' => 'Page not found.',
@@ -93,10 +94,12 @@ return [
     'TASK_PAGE_UPDATE_TASK' => 'Update task',
     'TASK_PAGE_DELETE_TASK' => 'Delete task',
     'TASK_PAGE_MODAL_FORM_TEXT' => 'Are you sure that you want to delete this task?',
+    'TASK_PAGE_SOLVE_TASK' => 'Solve task',
     /* Сообщения на страницах раздела "Задачи" */
     'TASK_PAGE_MESSAGE_CREATE_TASK' => 'You have successfully created a new task.',
     'TASK_PAGE_MESSAGE_UPDATED_TASK' => 'You have successfully updated task.',
     'TASK_PAGE_MESSAGE_DELETED_TASK' => 'You have successfully deleted task.',
+    'TASK_PAGE_MESSAGE_SOLVED_TASK' => 'You have successfully solved task!',
     /* Страницы раздела "Критерии" */
     'CRITERIA_PAGE_CRITERIA' => 'Criteria',
     'CRITERIA_PAGE_CRITERIAS' => 'Criterias',

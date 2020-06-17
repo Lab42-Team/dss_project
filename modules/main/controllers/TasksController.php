@@ -8,6 +8,7 @@ use yii\data\ActiveDataProvider;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use app\components\Solver;
 
 /**
  * TasksController implements the CRUD actions for Task model.
@@ -122,6 +123,41 @@ class TasksController extends Controller
             Yii::t('app', 'TASK_PAGE_MESSAGE_DELETED_TASK'));
 
         return $this->redirect(['list']);
+    }
+
+    /**
+     * @param $id
+     * @return string
+     * @throws NotFoundHttpException
+     */
+    public function actionCalculate($id)
+    {
+        // Поиск задачи по id
+        $model = $this->findModel($id);
+        // Формирование исходного массива альтернатив
+        $sourceAlternatives = [
+            [[2,1,0], [3,0,0], [3,0,0], [1,1,1], [1,2,0], [2,1,0], [3,0,0], [2,1], [3,0], [3,0], [3,0,0]],
+            [[3,0,0], [2,1,0], [2,1,0], [1,2,0], [2,1,0], [3,0,0], [2,1,0], [3,0], [2,1], [2,1], [3,0,0]],
+            [[2,1,0], [2,1,0], [2,1,0], [2,1,0], [3,0,0], [2,1,0], [2,0,1], [3,0], [3,0], [3,0], [2,1,0]],
+            [[2,1,0], [1,2,0], [2,1,0], [1,2,0], [2,1,0], [2,1,0], [2,1,0], [1,2], [3,0], [3,0], [2,1,0]],
+            [[2,1,0], [2,1,0], [3,0,0], [2,1,0], [2,0,1], [2,0,1], [2,1,0], [3,0], [2,1], [3,0], [3,0,0]],
+            [[2,1,0], [1,2,0], [2,1,0], [0,3,0], [1,2,0], [3,0,0], [2,1,0], [3,0], [3,0], [2,1], [2,1,0]],
+            [[2,1,0], [2,1,0], [2,1,0], [2,1,0], [2,1,0], [1,1,1], [2,1,0], [1,2], [2,1], [1,2], [2,0,1]],
+            [[3,0,0], [3,0,0], [2,1,0], [1,1,1], [1,0,2], [3,0,0], [3,0,0], [1,2], [3,0], [3,0], [2,1,0]],
+            [[2,1,0], [2,1,0], [1,1,1], [0,2,1], [0,2,1], [2,0,1], [1,1,1], [1,2], [2,1], [2,1], [1,1,1]],
+            [[1,2,0], [1,1,1], [2,0,1], [2,0,1], [2,1,0], [2,0,1], [2,0,1], [2,1], [2,1], [2,1], [2,0,1]]
+        ];
+        // Ранжирование массива альтернатив
+        $solver = new Solver();
+        $rankedAlternatives = $solver->getRanksByAramis($sourceAlternatives);
+        // Вывод сообщения об успешном решении задачи
+        Yii::$app->getSession()->setFlash('success',
+            Yii::t('app', 'TASK_PAGE_MESSAGE_SOLVED_TASK'));
+
+        return $this->render('calculate', [
+            'model' => $model,
+            'rankedAlternatives' => $rankedAlternatives
+        ]);
     }
 
     /**
